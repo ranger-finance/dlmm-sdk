@@ -2,6 +2,7 @@ use anchor_lang::event;
 use anchor_lang::prelude::*;
 
 #[event]
+#[derive(Debug)]
 pub struct CompositionFee {
     // Sender's public key
     pub from: Pubkey,
@@ -18,6 +19,7 @@ pub struct CompositionFee {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct AddLiquidity {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -32,6 +34,7 @@ pub struct AddLiquidity {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct RemoveLiquidity {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -46,6 +49,7 @@ pub struct RemoveLiquidity {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct Swap {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -72,6 +76,7 @@ pub struct Swap {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct ClaimReward {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -86,6 +91,7 @@ pub struct ClaimReward {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct FundReward {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -98,6 +104,7 @@ pub struct FundReward {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct InitializeReward {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -112,6 +119,7 @@ pub struct InitializeReward {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct UpdateRewardDuration {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -124,6 +132,7 @@ pub struct UpdateRewardDuration {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct UpdateRewardFunder {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -136,6 +145,7 @@ pub struct UpdateRewardFunder {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct PositionClose {
     // Address of the position
     pub position: Pubkey,
@@ -144,6 +154,7 @@ pub struct PositionClose {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct ClaimFee {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -158,6 +169,7 @@ pub struct ClaimFee {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct LbPairCreate {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -170,6 +182,7 @@ pub struct LbPairCreate {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct PositionCreate {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -180,6 +193,7 @@ pub struct PositionCreate {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct FeeParameterUpdate {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -190,6 +204,7 @@ pub struct FeeParameterUpdate {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct IncreaseObservation {
     // Oracle address
     pub oracle: Pubkey,
@@ -198,6 +213,7 @@ pub struct IncreaseObservation {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct WithdrawIneligibleReward {
     // Liquidity pool pair
     pub lb_pair: Pubkey,
@@ -208,6 +224,7 @@ pub struct WithdrawIneligibleReward {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct UpdatePositionOperator {
     // Position public key
     pub position: Pubkey,
@@ -218,6 +235,7 @@ pub struct UpdatePositionOperator {
 }
 
 #[event]
+#[derive(Debug)]
 pub struct UpdatePositionLockReleasePoint {
     // Position public key
     pub position: Pubkey,
